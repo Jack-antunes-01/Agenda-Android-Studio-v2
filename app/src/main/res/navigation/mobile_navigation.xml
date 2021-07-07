@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/loginFragment">
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.example.agenda.Home"
+        android:label="Página inicial"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_navigation_home_to_cadastro_contato"
+            app:destination="@id/cadastro_contato"
+            app:popUpTo="@id/navigation_home" />
+        <action
+            android:id="@+id/action_navigation_home_to_perfil_contato"
+            app:destination="@id/perfil_contato" />
+        <argument
+            android:name="id"
+            app:argType="long" />
+        <argument
+            android:name="ra"
+            app:argType="long" />
+        <action
+            android:id="@+id/action_navigation_home_to_loginFragment"
+            app:destination="@id/loginFragment"
+            app:popUpTo="@id/loginFragment" />
+        <action
+            android:id="@+id/action_navigation_home_to_listarDadosExcluidos"
+            app:destination="@id/listarDadosExcluidos" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_profile"
+        android:name="com.example.agenda.PerfilUsuario"
+        android:label="Perfil"
+        tools:layout="@layout/fragment_profile" >
+        <action
+            android:id="@+id/action_navigation_profile_to_editarPerfil"
+            app:destination="@id/editarPerfil" />
+    </fragment>
+    <fragment
+        android:id="@+id/perfil_contato"
+        android:name="com.example.agenda.PerfilContato"
+        android:label="Perfil contato"
+        tools:layout="@layout/fragment_perfil_contato">
+        <argument
+            android:name="id"
+            app:argType="long" />
+        <action
+            android:id="@+id/action_perfil_contato_to_cadastro_contato"
+            app:destination="@id/cadastro_contato" />
+    </fragment>
+    <fragment
+        android:id="@+id/cadastro_contato"
+        android:name="com.example.agenda.CadastroContato"
+        android:label="Contato"
+        tools:layout="@layout/fragment_cadastro_contato">
+        <argument
+            android:name="id"
+            app:argType="string"
+            app:nullable="true" />
+        <argument
+            android:name="ra"
+            app:argType="string"
+            app:nullable="true" />
+        <action
+            android:id="@+id/action_cadastro_contato_to_perfil_contato"
+            app:destination="@id/perfil_contato"
+            app:popUpTo="@id/navigation_home" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.agenda.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_loginFragment_to_cadastroUsuarioFragment"
+            app:destination="@id/cadastroUsuarioFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_navigation_home"
+            app:destination="@id/navigation_home"
+            app:popUpTo="@id/navigation_home"
+            app:popUpToInclusive="false" />
+    </fragment>
+    <fragment
+        android:id="@+id/cadastroUsuarioFragment"
+        android:name="com.example.agenda.CadastroUsuario"
+        android:label="fragment_cadastro_usuario"
+        tools:layout="@layout/fragment_cadastro_usuario" />
+    <fragment
+        android:id="@+id/editarPerfil"
+        android:name="com.example.agenda.EditarPerfil"
+        android:label="Editar perfil"
+        tools:layout="@layout/fragment_editar_perfil" />
+    <fragment
+        android:id="@+id/listarDadosExcluidos"
+        android:name="com.example.agenda.ListarDadosExcluidos"
+        android:label="Contatos excluídos"
+        tools:layout="@layout/fragment_listar_dados_excluidos" />
+
+</navigation>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ListarDadosExcluidos">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/excludedPeopleList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
+
+    <TextView
+        android:id="@+id/noExcludedContacts"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Não há contatos a serem listados"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:textColor="@color/purple_500"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabBackExcludedPeople"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/fab_margin"
+        android:layout_gravity="bottom|end"
+        android:backgroundTint="@color/purple_500"
+        app:srcCompat="@drawable/abc_vector_test"
+        app:tint="@color/white" />
+</FrameLayout>

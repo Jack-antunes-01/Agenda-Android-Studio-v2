@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/background"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:theme="@style/ThemeOverlay.AppCompat.Dark">
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="@dimen/fab_margin"
+        android:backgroundTint="@color/purple_500"
+        app:backgroundTint="#FFFFFF"
+        app:borderWidth="1dp"
+        app:srcCompat="@drawable/abc_vector_test"
+        app:tint="@android:color/white" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="20dp"
+                android:paddingHorizontal="50dp"
+                android:paddingBottom="80dp"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/fotoPerfilContatoFake"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_gravity="center"
+                    app:srcCompat="@mipmap/ic_user" />
+
+                <ImageView
+                    android:id="@+id/fotoPerfilContato"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_gravity="center" />
+
+                <Button
+                    android:id="@+id/alterarFotoPerfilContato"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:backgroundTint="@color/purple_500"
+                    android:text="Alterar foto"
+                    />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:textSize="20dp"
+                    android:layout_marginTop="8dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/purple_500"
+                    android:text="Nome *" />
+                <EditText
+                    android:id="@+id/cadName"
+                    android:maxLength="50"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingVertical="10dp"
+                    android:paddingHorizontal="15dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/edittext_rounded_corners"
+                    android:textColorHint="@android:color/darker_gray"
+                    android:textColor="@color/purple_700"
+                    android:hint="Nome.." />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/purple_500"
+                    android:text="Apelido" />
+                <EditText
+                    android:maxLength="20"
+                    android:id="@+id/cadNickname"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingVertical="10dp"
+                    android:paddingHorizontal="15dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/edittext_rounded_corners"
+                    android:textColorHint="@android:color/darker_gray"
+                    android:textColor="@color/purple_700"
+                    android:hint="Apelido.." />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/purple_500"
+                    android:text="Celular *" />
+                <EditText
+                    android:id="@+id/cadPhone"
+                    android:maxLength="11"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingVertical="10dp"
+                    android:paddingHorizontal="15dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/edittext_rounded_corners"
+                    android:textColorHint="@android:color/darker_gray"
+                    android:textColor="@color/purple_700"
+                    android:hint="34 99994-0378" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/purple_500"
+                    android:text="Whatsapp" />
+                <EditText
+                    android:id="@+id/cadWhatsapp"
+                    android:maxLength="11"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingVertical="10dp"
+                    android:paddingHorizontal="15dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/edittext_rounded_corners"
+                    android:textColor="@color/purple_700"
+                    android:textColorHint="@android:color/darker_gray"
+                    android:hint="34 99994-0378"
+                    />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/purple_500"
+                    android:text="Telegram" />
+                <EditText
+                    android:id="@+id/cadTelegram"
+                    android:maxLength="11"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingVertical="10dp"
+                    android:paddingHorizontal="15dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/edittext_rounded_corners"
+                    android:textColor="@color/purple_700"
+                    android:textColorHint="@android:color/darker_gray"
+                    android:hint="34 99994-0378"
+                    />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/purple_500"
+                    android:text="Data de nascimento" />
+                <EditText
+                    android:id="@+id/cadDtNasc"
+                    android:maxLength="10"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingVertical="10dp"
+                    android:paddingHorizontal="15dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/edittext_rounded_corners"
+                    android:textColor="@color/purple_700"
+                    android:textColorHint="@android:color/darker_gray"
+                    android:hint="10/01/1970.." />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/purple_500"
+                    android:text="Facebook" />
+                <EditText
+                    android:id="@+id/cadFacebook"
+                    android:maxLength="100"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingVertical="10dp"
+                    android:paddingHorizontal="15dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/edittext_rounded_corners"
+                    android:textColor="@color/purple_700"
+                    android:textColorHint="@android:color/darker_gray"
+                    android:hint="Url facebook" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/purple_500"
+                    android:text="Twitter" />
+                <EditText
+                    android:id="@+id/cadTwitter"
+                    android:maxLength="100"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingVertical="10dp"
+                    android:paddingHorizontal="15dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/edittext_rounded_corners"
+                    android:textColor="@color/purple_700"
+                    android:textColorHint="@android:color/darker_gray"
+                    android:hint="Url twitter" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/purple_500"
+                    android:text="Instagram" />
+                <EditText
+                    android:id="@+id/cadInstagram"
+                    android:maxLength="100"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingVertical="10dp"
+                    android:paddingHorizontal="15dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/edittext_rounded_corners"
+                    android:textColor="@color/purple_700"
+                    android:textColorHint="@android:color/darker_gray"
+                    android:hint="Url instagram" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/purple_500"
+                    android:text="E-mail" />
+                <EditText
+                    android:id="@+id/cadEmail"
+                    android:maxLength="100"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingVertical="10dp"
+                    android:paddingHorizontal="15dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/edittext_rounded_corners"
+                    android:textColor="@color/purple_700"
+                    android:textColorHint="@android:color/darker_gray"
+                    android:hint="Email.." />
+
+                <Button
+                    android:id="@+id/cadBtnRegister"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/purple_500"
+                    android:paddingVertical="12dp"
+                    android:textSize="16dp"
+                    android:layout_marginTop="20dp"
+                    android:text="Cadastrar"
+                    android:layout_gravity="center"
+                    app:cornerRadius="5dp" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
